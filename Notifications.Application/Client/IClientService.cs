@@ -7,5 +7,5 @@ public interface IClientService
 {
     Task<CreateClientResult> Create(CreateClientRequest request);
 
-    Task<GetClientByIdResult> GetById(GetClientByIdRequest request);
+    Task<ClientResult> GetById(GetClientByIdRequest request);
 }

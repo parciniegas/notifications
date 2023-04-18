@@ -15,6 +15,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dragonfly", "Dragonfly", "{
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dragonfly.Core", "..\Dragonfly\Dragonfly.Core\Dragonfly.Core.csproj", "{AB931C4C-C5A5-4F3B-B738-181B0DAB0075}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dragonfly.Domain", "..\Dragonfly\Dragonfly.Domain\Dragonfly.Domain.csproj", "{FCC4E97D-F387-412E-ACFB-E0E91B68053C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,12 +43,17 @@ Global
 		{AB931C4C-C5A5-4F3B-B738-181B0DAB0075}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB931C4C-C5A5-4F3B-B738-181B0DAB0075}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB931C4C-C5A5-4F3B-B738-181B0DAB0075}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCC4E97D-F387-412E-ACFB-E0E91B68053C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCC4E97D-F387-412E-ACFB-E0E91B68053C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCC4E97D-F387-412E-ACFB-E0E91B68053C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCC4E97D-F387-412E-ACFB-E0E91B68053C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{AB931C4C-C5A5-4F3B-B738-181B0DAB0075} = {2268EA9F-1E8F-42DF-A03A-B019D0B68D75}
+		{FCC4E97D-F387-412E-ACFB-E0E91B68053C} = {2268EA9F-1E8F-42DF-A03A-B019D0B68D75}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F8B96432-25B6-4E12-B986-34754613D75F}

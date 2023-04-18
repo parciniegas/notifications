@@ -20,9 +20,9 @@ public class ClientService : IApplicationService, IClientService
         return result;
     }
 
-    public async Task<GetClientByIdResult> GetById(GetClientByIdRequest request)
+    public async Task<ClientResult> GetById(GetClientByIdRequest request)
     {
-        var result = await _dispatcher.DispatchAsync<GetClientByIdRequest, GetClientByIdResult>(request);
+        var result = await _dispatcher.DispatchAsync<GetClientByIdRequest, ClientResult>(request);
         return result;
     }
 }

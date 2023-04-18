@@ -2,13 +2,12 @@
 
 namespace Notifications.Application.Client.Requests.GetById;
 
-public class GetClientByIdHandler : IHandler<GetClientByIdRequest, GetClientByIdResult>
+public class GetClientByIdHandler : IHandler<GetClientByIdRequest, ClientResult>
 {
-    public Task<GetClientByIdResult> HandleAsync(GetClientByIdRequest request, CancellationToken cancellationToken = default)
+    public Task<ClientResult> HandleAsync(GetClientByIdRequest request, CancellationToken cancellationToken = default)
     {
-        var result = new GetClientByIdResult(
-                true, "NA", "Client found", new Client(1, "Client 1", "Client 1 description"));
+        var client = new ClientResult(1, "Client 1", "Client 1 description");
 
-        return Task.FromResult(result);
+        return Task.FromResult(client);
     }
 }
