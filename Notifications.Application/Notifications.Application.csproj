@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Dragonfly\Dragonfly.Core\Dragonfly.Core.csproj" />
+  </ItemGroup>
+
 </Project>

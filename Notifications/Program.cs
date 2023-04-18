@@ -1,14 +1,14 @@
-using Client = Notifications.Endpoints.Client;
-using Message = Notifications.Endpoints.Message;
+using Dragonfly.Core.Commands;
+using Dragonfly.Core.Services;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddControllers();
+
+builder.Services.AddRequests();
+builder.Services.AddApplicationServices();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddMediatR(cfg =>
-{
-    cfg.RegisterServicesFromAssembly(typeof(Program).Assembly);
-});
 
 var app = builder.Build();
 
@@ -18,8 +18,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.MapGet("/", () => "Hello World!");
-app.MapPost("/customer", Message.Create.Post);
-app.MapPost("/client", Client.Create.Post);
+app.MapControllers();
 
 app.Run();
