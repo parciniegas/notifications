@@ -6,4 +6,13 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="MassTransit" Version="8.0.15" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Dragonfly\Dragonfly.Core\Dragonfly.Core.csproj" />
+    <ProjectReference Include="..\..\Dragonfly\Dragonfly.Domain\Dragonfly.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
