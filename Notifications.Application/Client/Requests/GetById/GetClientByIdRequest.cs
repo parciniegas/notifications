@@ -2,5 +2,5 @@
 
 namespace Notifications.Application.Client.Requests.GetById;
 
-public record GetClientByIdRequest(int Id) : IRequest
+public record GetClientByIdRequest(int Id) : ICommand
 { }

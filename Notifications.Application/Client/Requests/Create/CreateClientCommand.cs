@@ -2,7 +2,7 @@
 
 namespace Notifications.Application.Client.Requests.Create;
 
-public record CreateClientRequest(string Name, string Description)
-    : IRequest
+public record CreateClientCommand(string Name, string Description)
+    : ICommand
 {
 }

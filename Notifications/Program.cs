@@ -4,7 +4,7 @@ using Dragonfly.Core.Services;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 
-builder.Services.AddRequests();
+builder.Services.AddCommands();
 builder.Services.AddApplicationServices();
 
 builder.Services.AddEndpointsApiExplorer();

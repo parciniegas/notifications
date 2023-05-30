@@ -2,10 +2,10 @@
 
 namespace Notifications.Application.Client.Requests.Create;
 
-public record CreateClientResult : Result<string>
+public record CreateClientResult : CommandResult<string>
 {
-    public CreateClientResult(bool succes, string code, string message, string value)
-        : base(succes, code, message, value)
+    public CreateClientResult(bool success, string message, string value)
+        : base(success, message, value)
     {
     }
 }

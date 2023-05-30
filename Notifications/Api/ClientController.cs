@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Notifications.Api.DTO;
 using Notifications.Application.Client;
 using Notifications.Application.Client.Requests.Create;
 using Notifications.Application.Client.Requests.GetById;
@@ -20,12 +19,11 @@ namespace Notifications.Api
         }
 
         [HttpGet]
-        public async Task<IActionResult> Get(int id)
+        public async Task<IActionResult> Get([FromQuery]GetClientByIdRequest request)
         {
             try
             {
-                var request = new GetClientByIdRequest(id);
-                var client = await _clientService.GetById(request);
+                var client = await _clientService.GetClientById(request);
                 return Ok(client);
             }
             catch
@@ -36,10 +34,9 @@ namespace Notifications.Api
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post(CreateClientDto dto)
+        public async Task<IActionResult> Post([FromBody]CreateClientCommand command)
         {
-            var request = new CreateClientRequest(dto.Name, dto.Description);
-            var result = await _clientService.Create(request);
+            var result = await _clientService.CreateClient(command);
 
             return Ok(result);
         }

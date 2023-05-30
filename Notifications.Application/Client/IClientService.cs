@@ -5,7 +5,7 @@ namespace Notifications.Application.Client;
 
 public interface IClientService
 {
-    Task<CreateClientResult> Create(CreateClientRequest request);
+    Task<CreateClientResult> CreateClient(CreateClientCommand request);
 
-    Task<ClientResult> GetById(GetClientByIdRequest request);
+    Task<ClientResult> GetClientById(GetClientByIdRequest request);
 }
