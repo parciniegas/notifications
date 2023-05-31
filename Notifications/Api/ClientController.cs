@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Notifications.Application.Client;
+using Notifications.Application.Client.Queries.GetById;
 using Notifications.Application.Client.Requests.Create;
-using Notifications.Application.Client.Requests.GetById;
 
 namespace Notifications.Api
 {
@@ -19,7 +19,7 @@ namespace Notifications.Api
         }
 
         [HttpGet]
-        public async Task<IActionResult> Get([FromQuery]GetClientByIdRequest request)
+        public async Task<IActionResult> Get([FromQuery]GetClientByIdQuery request)
         {
             try
             {

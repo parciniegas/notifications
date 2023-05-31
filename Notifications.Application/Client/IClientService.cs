@@ -1,11 +1,11 @@
-﻿using Notifications.Application.Client.Requests.Create;
-using Notifications.Application.Client.Requests.GetById;
+﻿using Notifications.Application.Client.Queries.GetById;
+using Notifications.Application.Client.Requests.Create;
 
 namespace Notifications.Application.Client;
 
 public interface IClientService
 {
-    Task<CreateClientResult> CreateClient(CreateClientCommand request);
+    Task<CreateClientResult> CreateClient(CreateClientCommand command);
 
-    Task<ClientResult> GetClientById(GetClientByIdRequest request);
+    Task<ClientResult> GetClientById(GetClientByIdQuery query);
 }

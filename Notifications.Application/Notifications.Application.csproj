@@ -7,7 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Dragonfly\Dragonfly.Application\Dragonfly.Application.csproj" />
     <ProjectReference Include="..\..\Dragonfly\Dragonfly.Core\Dragonfly.Core.csproj" />
+    <ProjectReference Include="..\..\Dragonfly\Dragonfly.Cqrs\Dragonfly.Cqrs.csproj" />
   </ItemGroup>
 
 </Project>
