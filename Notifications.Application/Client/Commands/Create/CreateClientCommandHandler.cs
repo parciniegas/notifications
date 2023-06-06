@@ -6,7 +6,7 @@ public class CreateClientCommandHandler : ICommandHandler<CreateClientCommand, C
 {
     public Task<CreateClientResult> HandleAsync(CreateClientCommand command, CancellationToken cancellationToken = default)
     {
-        var result = new CreateClientResult(true, $"Client {command.Name} created", $"{command.Description}");
+        var result = new CreateClientResult($"Client {command.Name} created");
         return Task.FromResult(result);
     }
 }

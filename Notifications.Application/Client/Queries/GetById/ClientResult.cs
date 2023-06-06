@@ -1,6 +1,10 @@
-﻿namespace Notifications.Application.Client.Queries.GetById
+﻿using Dragonfly.Cqrs.Queries;
+
+namespace Notifications.Application.Client.Queries.GetById;
+
+public class ClientResult : QueryResult<string>
 {
-    public record ClientResult(int Id, string Name, string Description)
+    public ClientResult(string result) : base(result)
     {
     }
 }
