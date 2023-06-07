@@ -1,5 +1,6 @@
 using Dragonfly.Cqrs.Commands;
 using Dragonfly.Cqrs.Queries;
+using Dragonfly.Infrastructure.EntityFramework;
 using Dragonfly.Application.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,6 +8,7 @@ builder.Services.AddControllers();
 
 builder.Services.AddCommands();
 builder.Services.AddQueries();
+builder.Services.AddUnitOfWork();
 builder.Services.AddApplicationServices();
 
 builder.Services.AddEndpointsApiExplorer();

@@ -10,6 +10,8 @@
     <ProjectReference Include="..\..\Dragonfly\Dragonfly.Application\Dragonfly.Application.csproj" />
     <ProjectReference Include="..\..\Dragonfly\Dragonfly.Core\Dragonfly.Core.csproj" />
     <ProjectReference Include="..\..\Dragonfly\Dragonfly.Cqrs\Dragonfly.Cqrs.csproj" />
+    <ProjectReference Include="..\..\Dragonfly\Dragonfly.Infrastructure\Dragonfly.Infrastructure.csproj" />
+    <ProjectReference Include="..\Notifications.Domain\Notifications.Domain.csproj" />
   </ItemGroup>
 
 </Project>

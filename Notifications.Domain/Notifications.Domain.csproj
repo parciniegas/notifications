@@ -15,4 +15,9 @@
     <ProjectReference Include="..\..\Dragonfly\Dragonfly.Domain\Dragonfly.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Client\Commands\" />
+    <Folder Include="Client\Queries\" />
+  </ItemGroup>
+
 </Project>
