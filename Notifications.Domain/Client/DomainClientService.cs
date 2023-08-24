@@ -1,22 +1,20 @@
-﻿using Dragonfly.Application.Services;
-using Dragonfly.Cqrs.Commands;
+﻿using Dragonfly.Cqrs.Commands;
 using Dragonfly.Cqrs.Queries;
-using Notifications.Application.Client.Queries.GetById;
-using Notifications.Application.Client.Requests.Create;
+using Notifications.Domain.Client.Commands.Create;
+using Notifications.Domain.Client.Queries.GetById;
 
-namespace Notifications.Application.Client;
+namespace Notifications.Domain.Client;
 
-public class ClientService : IApplicationService, IClientService
+public class DomainClientService: IDomainClientService
 {
     private readonly ICommandDispatcher _commandDispatcher;
     private readonly IQueryDispatcher _queryDispatcher;
 
-    public ClientService(ICommandDispatcher dispatcher, IQueryDispatcher queryDispatcher)
+    public DomainClientService(ICommandDispatcher dispatcher, IQueryDispatcher queryDispatcher)
     {
         _commandDispatcher = dispatcher;
         _queryDispatcher = queryDispatcher;
     }
-    
 
     public async Task<CreateClientResult> CreateClient(CreateClientCommand command)
     {

@@ -1,9 +1,9 @@
-﻿using Notifications.Application.Client.Queries.GetById;
-using Notifications.Application.Client.Requests.Create;
+﻿using Notifications.Domain.Client.Commands.Create;
+using Notifications.Domain.Client.Queries.GetById;
 
 namespace Notifications.Application.Client;
 
-public interface IClientService
+public interface IAppClientService
 {
     Task<CreateClientResult> CreateClient(CreateClientCommand command);
 

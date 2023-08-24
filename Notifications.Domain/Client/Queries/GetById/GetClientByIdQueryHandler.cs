@@ -1,6 +1,6 @@
 ﻿using Dragonfly.Cqrs.Queries;
 
-namespace Notifications.Application.Client.Queries.GetById;
+namespace Notifications.Domain.Client.Queries.GetById;
 
 public class GetClientByIdQueryHandler : IQueryHandler<GetClientByIdQuery, ClientResult>
 {
