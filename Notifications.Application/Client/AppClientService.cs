@@ -7,21 +7,21 @@ namespace Notifications.Application.Client;
 
 public class AppClientService : IApplicationService, IAppClientService
 {
-    private readonly IDomainClientService _clientService;
+    private readonly IDomainClientService _clientDomainService;
 
     public AppClientService(IDomainClientService clientService)
     {
-        _clientService = clientService;
+        _clientDomainService = clientService;
     }
     
 
     public async Task<CreateClientResult> CreateClient(CreateClientCommand command)
     {
-        return await _clientService.CreateClient(command);
+        return await _clientDomainService.CreateClient(command);
     }
 
     public async Task<ClientResult> GetClientById(GetClientByIdQuery query)
     {
-        return await _clientService.GetClientById(query);
+        return await _clientDomainService.GetClientById(query);
     }
 }
