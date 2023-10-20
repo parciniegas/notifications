@@ -1,5 +1,6 @@
 ﻿using Dragonfly.Application.Services;
-using Notifications.Domain.Client;
+using Dragonfly.CQRS.Commands;
+using Dragonfly.CQRS.Queries;
 using Notifications.Domain.Client.Commands.Create;
 using Notifications.Domain.Client.Queries.GetById;
 
@@ -7,21 +8,25 @@ namespace Notifications.Application.Client;
 
 public class AppClientService : IApplicationService, IAppClientService
 {
-    private readonly IDomainClientService _clientDomainService;
+    private readonly ICommandDispatcher _commandDispatcher;
+    private readonly IQueryDispatcher _queryDispatcher;
 
-    public AppClientService(IDomainClientService clientService)
+    public AppClientService(ICommandDispatcher commandDispatcher, IQueryDispatcher queryDispatcher)
     {
-        _clientDomainService = clientService;
+        _commandDispatcher = commandDispatcher;
+        _queryDispatcher = queryDispatcher;
     }
     
 
     public async Task<CreateClientResult> CreateClient(CreateClientCommand command)
     {
-        return await _clientDomainService.CreateClient(command);
+        var result = await _commandDispatcher.ExecAsync<CreateClientCommand, CreateClientResult>(command);
+        return result;
     }
 
     public async Task<ClientResult> GetClientById(GetClientByIdQuery query)
     {
-        return await _clientDomainService.GetClientById(query);
+        var result = await _queryDispatcher.QueryAsync<GetClientByIdQuery, ClientResult>(query);
+        return result;
     }
 }
