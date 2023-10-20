@@ -1,4 +1,4 @@
-﻿using Dragonfly.Cqrs.Commands;
+﻿using Dragonfly.CQRS.Commands;
 
 namespace Notifications.Domain.Client.Commands.Create;
 

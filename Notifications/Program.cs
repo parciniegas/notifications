@@ -1,6 +1,6 @@
 using Dragonfly.Application.Services;
-using Dragonfly.Cqrs.Commands;
-using Dragonfly.Cqrs.Queries;
+using Dragonfly.CQRS.Commands;
+using Dragonfly.CQRS.Queries;
 using Dragonfly.Domain.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,7 +11,7 @@ builder.Services.AddQueries();
 builder.Services.AddApplicationServices();
 builder.Services.AddDomainServices();
 
-builder.Services.AddEndpointsApiExplorer();
+//builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
