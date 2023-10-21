@@ -1,10 +1,13 @@
 using Dragonfly.Application.Services;
-using Dragonfly.CQRS.Commands;
-using Dragonfly.CQRS.Queries;
+using Dragonfly.Cqrs.Commands;
+using Dragonfly.Cqrs.Queries;
 using Dragonfly.Domain.Services;
+using MinimalApi.Endpoint.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
+builder.Services.AddEndpoints();
+builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddCommands();
 builder.Services.AddQueries();
@@ -22,6 +25,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.MapEndpoints();
 app.MapControllers();
 
 app.Run();

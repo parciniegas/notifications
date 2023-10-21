@@ -68,7 +68,7 @@ namespace Notifications.Api
         {
             var result = await _clientService.CreateClient(command);
 
-            return CreatedAtAction(nameof(GetById), new {id = 1}, result);
+            return CreatedAtAction(nameof(GetById), new {id = result.Id}, result);
         }
     }
 }

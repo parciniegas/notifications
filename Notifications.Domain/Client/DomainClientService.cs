@@ -1,5 +1,5 @@
-﻿using Dragonfly.CQRS.Commands;
-using Dragonfly.CQRS.Queries;
+﻿using Dragonfly.Cqrs.Commands;
+using Dragonfly.Cqrs.Queries;
 using Notifications.Domain.Client.Commands.Create;
 using Notifications.Domain.Client.Queries.GetById;
 

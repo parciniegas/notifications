@@ -1,4 +1,4 @@
-﻿using Dragonfly.CQRS.Queries;
+﻿using Dragonfly.Cqrs.Queries;
 
 namespace Notifications.Domain.Client.Queries.GetById;
 
