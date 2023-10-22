@@ -34,6 +34,7 @@ namespace Notifications.Api
         }
 
         [HttpGet("{id}")]
+        [ProducesResponseType(typeof(GetClientByIdQuery), StatusCodes.Status200OK)]
         public async Task<IActionResult> GetById(int id)
         {
             try
